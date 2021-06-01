@@ -163,35 +163,35 @@ public class login_view extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void login_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_ButtonActionPerformed
-        
+
         login();
     }//GEN-LAST:event_login_ButtonActionPerformed
 
     private void Password_FieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Password_FieldKeyPressed
         // TODO add your handling code here:
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             login();
+        }
     }//GEN-LAST:event_Password_FieldKeyPressed
 
     private void email_text_fieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_email_text_fieldKeyPressed
         // TODO add your handling code here:
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER)
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             Password_Field.requestFocus();
+        }
     }//GEN-LAST:event_email_text_fieldKeyPressed
 
-
-
-    public void login()
-    {
-        Admin_controller ac=new Admin_controller();
-        String access=ac.login(email_text_field.getText(), Password_Field.getText());
+    public void login() {
+        Admin_controller ac = new Admin_controller();
+        String access = ac.login(email_text_field.getText(), Password_Field.getText());
         JOptionPane.showMessageDialog(null, access);
-        if(access.equals("welcom admin")){
-        app_admin a = new app_admin();
+        if (access.equals("welcom admin")) {
+            app_admin a = new app_admin();
             a.setVisible(true);
             this.setVisible(false);
+        }
     }
-    }
+
     /**
      * @param args the command line arguments
      */
