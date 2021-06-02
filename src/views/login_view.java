@@ -140,6 +140,11 @@ public class login_view extends javax.swing.JFrame {
         guest_Button.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         guest_Button.setForeground(new java.awt.Color(255, 255, 255));
         guest_Button.setText("Guest");
+        guest_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guest_ButtonActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 6;
@@ -180,6 +185,12 @@ public class login_view extends javax.swing.JFrame {
             Password_Field.requestFocus();
         }
     }//GEN-LAST:event_email_text_fieldKeyPressed
+
+    private void guest_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guest_ButtonActionPerformed
+        app_user a = new app_user();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_guest_ButtonActionPerformed
 
     public void login() {
         Admin_controller ac = new Admin_controller();
