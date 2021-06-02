@@ -17,20 +17,16 @@ import java.util.logging.Logger;
  */
 public class Data_controller {
 
-    private  Connection connection;
+    private Connection connection;
     private static Data_controller dm = new Data_controller();
 
     private Data_controller() {
         try {
-            getconnection();
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection("jdbc:sqlite:data.db");
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Faculty_controller.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    private void getconnection() throws ClassNotFoundException, SQLException {
-        Class.forName("org.sqlite.JDBC");
-        connection = DriverManager.getConnection("jdbc:sqlite:data.db");
     }
 
     public static Data_controller get_Data_controller() {
@@ -40,15 +36,15 @@ public class Data_controller {
     public Connection getConnection() {
         return connection;
     }
-    
-    public void CloseConnetion()
-    {
-        if (connection != null)
+
+    public void CloseConnetion() {
+        if (connection != null) {
             try {
                 connection.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(Data_controller.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(Data_controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
-        
+
     }
 }
