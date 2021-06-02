@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/views/app_admin.java</file>
             <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/controllers/Faculty_controller.java</file>
-            <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/controllers/Admin_controller.java</file>
+            <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/controllers/Data_controller.java</file>
             <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/views/login_view.java</file>
+            <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/controllers/Feedback_controller.java</file>
+            <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/models/Feedback.java</file>
+            <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/models/Faculty.java</file>
             <file>file:/C:/Users/eammn/OneDrive/Documents/NetBeansProjects/Faculty%20System/src/models/Admin.java</file>
         </group>
     </open-files>

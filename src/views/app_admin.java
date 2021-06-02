@@ -43,6 +43,7 @@ public class app_admin extends javax.swing.JFrame {
         add_faculty_Button = new javax.swing.JButton();
         search_btn = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         main_panel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -78,6 +79,8 @@ public class app_admin extends javax.swing.JFrame {
         edit_department_field = new javax.swing.JTextField();
         edit_faculty_name_field = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
+        feedback_panel = new javax.swing.JScrollPane();
+        feedback_area = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -97,7 +100,7 @@ public class app_admin extends javax.swing.JFrame {
         add_faculty_Button.setBackground(new java.awt.Color(0, 102, 204));
         add_faculty_Button.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         add_faculty_Button.setForeground(new java.awt.Color(255, 255, 255));
-        add_faculty_Button.setText("add_faculty");
+        add_faculty_Button.setText("add faculty");
         add_faculty_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 add_faculty_ButtonActionPerformed(evt);
@@ -124,6 +127,16 @@ public class app_admin extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(0, 102, 204));
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("feedback");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout side_PanelLayout = new javax.swing.GroupLayout(side_Panel);
         side_Panel.setLayout(side_PanelLayout);
         side_PanelLayout.setHorizontalGroup(
@@ -134,7 +147,8 @@ public class app_admin extends javax.swing.JFrame {
                     .addComponent(view_all_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(add_faculty_Button, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                     .addComponent(search_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         side_PanelLayout.setVerticalGroup(
@@ -144,11 +158,13 @@ public class app_admin extends javax.swing.JFrame {
                 .addComponent(view_all_btn)
                 .addGap(77, 77, 77)
                 .addComponent(add_faculty_Button)
-                .addGap(98, 98, 98)
+                .addGap(68, 68, 68)
                 .addComponent(search_btn)
-                .addGap(73, 73, 73)
+                .addGap(37, 37, 37)
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(69, 69, 69))
         );
 
         main_panel.setBackground(new java.awt.Color(255, 255, 255));
@@ -449,6 +465,12 @@ public class app_admin extends javax.swing.JFrame {
 
         main_panel.add(edit_panel);
 
+        feedback_area.setColumns(20);
+        feedback_area.setRows(5);
+        feedback_panel.setViewportView(feedback_area);
+
+        main_panel.add(feedback_panel);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -481,6 +503,7 @@ public class app_admin extends javax.swing.JFrame {
         jScrollPane1.setVisible(true);
         search_Panel.setVisible(false);
         add_panel.setVisible(false);
+        feedback_area.setVisible(false);
         edit_panel.setVisible(false);
     }//GEN-LAST:event_view_all_btnActionPerformed
 
@@ -489,6 +512,7 @@ public class app_admin extends javax.swing.JFrame {
         add_panel.setVisible(true);
         search_Panel.setVisible(false);
         edit_panel.setVisible(false);
+        feedback_area.setVisible(false);
 
     }//GEN-LAST:event_add_faculty_ButtonActionPerformed
 
@@ -504,6 +528,7 @@ public class app_admin extends javax.swing.JFrame {
         search_Panel.setVisible(true);
         add_panel.setVisible(false);
         edit_panel.setVisible(false);
+        feedback_area.setVisible(false);
         search_result_textarea.setText("");
         search_field.setText("");
     }//GEN-LAST:event_search_btnActionPerformed
@@ -536,6 +561,7 @@ public class app_admin extends javax.swing.JFrame {
             search_Panel.setVisible(false);
             add_panel.setVisible(false);
             edit_panel.setVisible(true);
+            feedback_area.setVisible(false);
             search_result_textarea.setText("");
 
         }
@@ -557,6 +583,7 @@ public class app_admin extends javax.swing.JFrame {
         search_Panel.setVisible(true);
         add_panel.setVisible(false);
         edit_panel.setVisible(false);
+        feedback_area.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -564,6 +591,23 @@ public class app_admin extends javax.swing.JFrame {
         a.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Feedback_controller fc=new Feedback_controller();
+        ArrayList<Feedback> feed = new ArrayList<>();
+        feed=fc.view_feedback();
+        String result="";
+        for (Feedback feedback : feed) {
+            result+="name: "+feedback.getName()+"\n\nSubject: "+feedback.getSubject()+"\n\nMessage: "+feedback.getMessage()+"\n\n\n";
+        }
+        System.out.println(result);
+        feedback_area.setText(result);
+        jScrollPane1.setVisible(false);
+        add_panel.setVisible(false);
+        search_Panel.setVisible(false);
+        edit_panel.setVisible(false);
+        feedback_area.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -615,10 +659,13 @@ public class app_admin extends javax.swing.JFrame {
     private javax.swing.JPanel edit_panel;
     private javax.swing.JTextField edit_professionalInterest_field;
     private javax.swing.JTextField faculty_name_field;
+    private javax.swing.JTextArea feedback_area;
+    private javax.swing.JScrollPane feedback_panel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
