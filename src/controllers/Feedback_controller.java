@@ -20,7 +20,7 @@ import models.Feedback;
  */
 public class Feedback_controller {
 
-    private static final Connection con = Data_controller.get_Data_controller().getConnection();
+    private static final Connection con = Data_controller.get_Connection();
 
     public String add_feedback(String email, String subject, String message) {
         try {

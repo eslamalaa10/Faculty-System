@@ -18,7 +18,7 @@ import models.Faculty;
  */
 public class Admin_controller {
 
-    private static final Connection con = Data_controller.get_Data_controller().getConnection();
+    private static final Connection con = Data_controller.get_Connection();
 
     public String login(String email, String password) {
         ResultSet result;

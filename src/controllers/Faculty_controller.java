@@ -21,7 +21,7 @@ import models.Faculty;
  */
 public class Faculty_controller {
 
-    private static final Connection con = Data_controller.get_Data_controller().getConnection();
+    private static final Connection con = Data_controller.get_Connection();
 
     public Faculty get_faculty(String name) {
         ResultSet result;
