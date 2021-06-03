@@ -7,8 +7,10 @@ package views;
 
 import controllers.Faculty_controller;
 import controllers.Feedback_controller;
+import controllers.faculty_factory;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import models.AbstractFaculty;
 import models.Faculty;
 
 /**
@@ -288,7 +290,7 @@ public class app_user extends javax.swing.JFrame {
         ArrayList<Faculty> f = fc.get_all_faculties();
         String data = new String();
         for (Faculty faculty : f) {
-            data += "name: " + faculty.getName() + "\ndepartment: " + faculty.getDepartment() + "\ncourses: " + faculty.getCourses() + "\narea of expertise: " + faculty.getAreaofexpertise() + "\nprofessional Interest: " + faculty.getProfessionalInterest() + "\n\n";
+            data += "name: " + faculty.get_name()+ "\ndepartment: " + faculty.get_department()+ "\ncourses: " + faculty.get_courses()+ "\narea of expertise: " + faculty.get_areaofexpertise()+ "\nprofessional Interest: " + faculty.get_professionalInterest() + "\n\n";
         }
         view_faculty_TextArea.setText(data);
         jScrollPane1.setVisible(true);
@@ -306,13 +308,13 @@ public class app_user extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         search_result_textarea.setText("");
-        Faculty_controller fc = new Faculty_controller();
-        Faculty faculty;
-        faculty = fc.get_faculty(search_field.getText());
-        if (faculty == null) {
+//        Faculty_controller fc = new Faculty_controller();
+//        Faculty faculty;
+        AbstractFaculty faculty = faculty_factory.get_faculty(search_field.getText());
+        if (faculty.isNil()) {
             JOptionPane.showMessageDialog(null, "not found");
         } else {
-            search_result_textarea.setText("name: " + faculty.getName() + "\ndepartment: " + faculty.getDepartment() + "\ncourses: " + faculty.getCourses() + "\narea of expertise: " + faculty.getAreaofexpertise() + "\nprofessional Interest: " + faculty.getProfessionalInterest());
+            search_result_textarea.setText("name: " + faculty.get_name()+ "\ndepartment: " + faculty.get_department()+ "\ncourses: " + faculty.get_courses()+ "\narea of expertise: " + faculty.get_areaofexpertise()+ "\nprofessional Interest: " + faculty.get_professionalInterest());
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 

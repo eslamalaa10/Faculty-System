@@ -9,7 +9,7 @@ package models;
  *
  * @author eammn
  */
-public class Faculty {
+public class Faculty extends AbstractFaculty{
 
     public Faculty(String name, String department, String courses, String areaofexpertise, String professionalInterest) {
         this.name = name;
@@ -18,32 +18,7 @@ public class Faculty {
         this.areaofexpertise = areaofexpertise;
         this.professionalInterest = professionalInterest;
     }
-    private String name;
-    private String department;
-    private String courses;
-    private String areaofexpertise;
-    private String professionalInterest;
-
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public String getCourses() {
-        return courses;
-    }
-
-    public String getAreaofexpertise() {
-        return areaofexpertise;
-    }
-
-    public String getProfessionalInterest() {
-        return professionalInterest;
-    }
+    
 
     public void setName(String name) {
         this.name = name;
@@ -63,5 +38,35 @@ public class Faculty {
 
     public void setProfessionalInterest(String professionalInterest) {
         this.professionalInterest = professionalInterest;
+    }
+
+    @Override
+    public boolean isNil() {
+        return false;
+    }
+
+    @Override
+    public String get_name() {
+        return name;
+    }
+
+    @Override
+    public String get_department() {
+        return department;
+    }
+
+    @Override
+    public String get_courses() {
+        return courses;
+    }
+
+    @Override
+    public String get_areaofexpertise() {
+        return areaofexpertise;
+    }
+
+    @Override
+    public String get_professionalInterest() {
+        return professionalInterest;
     }
 }

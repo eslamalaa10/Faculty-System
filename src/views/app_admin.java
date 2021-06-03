@@ -497,7 +497,7 @@ public class app_admin extends javax.swing.JFrame {
 //        content_panel.add(jLabel1);
         String data = new String();
         for (Faculty faculty : f) {
-            data += "name: " + faculty.getName() + "\ndepartment: " + faculty.getDepartment() + "\ncourses: " + faculty.getCourses() + "\narea of expertise: " + faculty.getAreaofexpertise() + "\nprofessional Interest: " + faculty.getProfessionalInterest() + "\n\n";
+            data += "name: " + faculty.get_name()+ "\ndepartment: " + faculty.get_department()+ "\ncourses: " + faculty.get_courses()+ "\narea of expertise: " + faculty.get_areaofexpertise()+ "\nprofessional Interest: " + faculty.get_professionalInterest() + "\n\n";
         }
         jTextArea1.setText(data);
         jScrollPane1.setVisible(true);
@@ -536,13 +536,14 @@ public class app_admin extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         search_result_textarea.setText("");
-        Faculty_controller fc = new Faculty_controller();
-        Faculty faculty;
-        faculty = fc.get_faculty(search_field.getText());
-        if (faculty == null) {
+//        Faculty_controller fc = new Faculty_controller();
+//        Faculty faculty;
+ 
+        AbstractFaculty faculty = faculty_factory.get_faculty(search_field.getText());
+        if (faculty.isNil()) {
             JOptionPane.showMessageDialog(null, "not found");
         } else {
-            search_result_textarea.setText("name: " + faculty.getName() + "\ndepartment: " + faculty.getDepartment() + "\ncourses: " + faculty.getCourses() + "\narea of expertise: " + faculty.getAreaofexpertise() + "\nprofessional Interest: " + faculty.getProfessionalInterest());
+            search_result_textarea.setText("name: " + faculty.get_name()+ "\ndepartment: " + faculty.get_department()+ "\ncourses: " + faculty.get_courses()+ "\narea of expertise: " + faculty.get_areaofexpertise()+ "\nprofessional Interest: " + faculty.get_professionalInterest());
         }
     }//GEN-LAST:event_jButton2ActionPerformed
     Faculty fac = null;
@@ -552,11 +553,11 @@ public class app_admin extends javax.swing.JFrame {
         if (fac == null) {
             JOptionPane.showMessageDialog(null, "not found");
         } else {
-            edit_areaofexpertise_field.setText(fac.getAreaofexpertise());
-            edit_courses_field.setText(fac.getCourses());
-            edit_department_field.setText(fac.getDepartment());
-            edit_faculty_name_field.setText(fac.getName());
-            edit_professionalInterest_field.setText(fac.getProfessionalInterest());
+            edit_areaofexpertise_field.setText(fac.get_areaofexpertise());
+            edit_courses_field.setText(fac.get_courses());
+            edit_department_field.setText(fac.get_department());
+            edit_faculty_name_field.setText(fac.get_name());
+            edit_professionalInterest_field.setText(fac.get_professionalInterest());
             jScrollPane1.setVisible(false);
             search_Panel.setVisible(false);
             add_panel.setVisible(false);
