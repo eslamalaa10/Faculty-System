@@ -11,8 +11,8 @@ import models.*;
  * @author eammn
  */
 public class faculty_factory {
-    static final Faculty_controller fc = new Faculty_controller();
-    static ArrayList<Faculty>faculties =fc.get_all_faculties();
+    private static final Faculty_controller fc = new Faculty_controller();
+    private static ArrayList<Faculty>faculties =fc.get_all_faculties();
     public static AbstractFaculty get_faculty(String name){
         
         for (Faculty faculty : faculties) {

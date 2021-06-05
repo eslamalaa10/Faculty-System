@@ -20,26 +20,25 @@ public class Faculty extends AbstractFaculty{
     }
     
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public void setCourses(String courses) {
-        this.courses = courses;
-    }
-
-    public void setAreaofexpertise(String areaofexpertise) {
-        this.areaofexpertise = areaofexpertise;
-    }
-
-    public void setProfessionalInterest(String professionalInterest) {
-        this.professionalInterest = professionalInterest;
-    }
-
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public void setDepartment(String department) {
+//        this.department = department;
+//    }
+//
+//    public void setCourses(String courses) {
+//        this.courses = courses;
+//    }
+//
+//    public void setAreaofexpertise(String areaofexpertise) {
+//        this.areaofexpertise = areaofexpertise;
+//    }
+//
+//    public void setProfessionalInterest(String professionalInterest) {
+//        this.professionalInterest = professionalInterest;
+//    }
     @Override
     public boolean isNil() {
         return false;

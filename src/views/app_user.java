@@ -38,10 +38,10 @@ public class app_user extends javax.swing.JFrame {
     private void initComponents() {
 
         side_Panel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        view_all_btn = new javax.swing.JButton();
+        search_btn = new javax.swing.JButton();
+        add_feedback_btn = new javax.swing.JButton();
+        back_btn = new javax.swing.JButton();
         main_panel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         view_faculty_TextArea = new javax.swing.JTextArea();
@@ -65,43 +65,43 @@ public class app_user extends javax.swing.JFrame {
         side_Panel.setBackground(new java.awt.Color(255, 255, 255));
         side_Panel.setPreferredSize(new java.awt.Dimension(162, 496));
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 204));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("view all");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        view_all_btn.setBackground(new java.awt.Color(0, 102, 204));
+        view_all_btn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        view_all_btn.setForeground(new java.awt.Color(255, 255, 255));
+        view_all_btn.setText("view all");
+        view_all_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                view_all_btnActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 204));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("search");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        search_btn.setBackground(new java.awt.Color(0, 102, 204));
+        search_btn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        search_btn.setForeground(new java.awt.Color(255, 255, 255));
+        search_btn.setText("search");
+        search_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                search_btnActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 102, 204));
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("send feedback");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        add_feedback_btn.setBackground(new java.awt.Color(0, 102, 204));
+        add_feedback_btn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        add_feedback_btn.setForeground(new java.awt.Color(255, 255, 255));
+        add_feedback_btn.setText("send feedback");
+        add_feedback_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                add_feedback_btnActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 102, 204));
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("back");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        back_btn.setBackground(new java.awt.Color(0, 102, 204));
+        back_btn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        back_btn.setForeground(new java.awt.Color(255, 255, 255));
+        back_btn.setText("back");
+        back_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                back_btnActionPerformed(evt);
             }
         });
 
@@ -112,23 +112,23 @@ public class app_user extends javax.swing.JFrame {
             .addGroup(side_PanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(side_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(view_all_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(search_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(add_feedback_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(back_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         side_PanelLayout.setVerticalGroup(
             side_PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(side_PanelLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jButton1)
+                .addComponent(view_all_btn)
                 .addGap(81, 81, 81)
-                .addComponent(jButton2)
+                .addComponent(search_btn)
                 .addGap(86, 86, 86)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(add_feedback_btn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(back_btn)
                 .addGap(64, 64, 64))
         );
 
@@ -285,7 +285,7 @@ public class app_user extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void view_all_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_view_all_btnActionPerformed
         Faculty_controller fc = new Faculty_controller();
         ArrayList<Faculty> f = fc.get_all_faculties();
         String data = new String();
@@ -297,13 +297,13 @@ public class app_user extends javax.swing.JFrame {
         search_panel.setVisible(false);
         add_feedback_panel.setVisible(false);
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_view_all_btnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void search_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_btnActionPerformed
         jScrollPane1.setVisible(false);
         search_panel.setVisible(true);
         add_feedback_panel.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_search_btnActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -324,17 +324,17 @@ public class app_user extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, result);
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void add_feedback_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add_feedback_btnActionPerformed
         jScrollPane1.setVisible(false);
         search_panel.setVisible(false);
         add_feedback_panel.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_add_feedback_btnActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void back_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_btnActionPerformed
         login_view a = new login_view();
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_back_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -372,14 +372,12 @@ public class app_user extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton add_feedback_btn;
     private javax.swing.JPanel add_feedback_panel;
+    private javax.swing.JButton back_btn;
     private javax.swing.JTextField email_field;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -388,11 +386,13 @@ public class app_user extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel main_panel;
     private javax.swing.JTextField message_field;
+    private javax.swing.JButton search_btn;
     private javax.swing.JTextField search_field;
     private javax.swing.JPanel search_panel;
     private javax.swing.JTextArea search_result_textarea;
     private javax.swing.JPanel side_Panel;
     private javax.swing.JTextField subject_field;
+    private javax.swing.JButton view_all_btn;
     private javax.swing.JTextArea view_faculty_TextArea;
     // End of variables declaration//GEN-END:variables
 }
