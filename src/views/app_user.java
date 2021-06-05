@@ -41,7 +41,7 @@ public class app_user extends javax.swing.JFrame {
         view_all_btn = new javax.swing.JButton();
         search_btn = new javax.swing.JButton();
         add_feedback_btn = new javax.swing.JButton();
-        back_btn = new javax.swing.JButton();
+        back_to_login_btn = new javax.swing.JButton();
         main_panel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         view_faculty_TextArea = new javax.swing.JTextArea();
@@ -95,13 +95,13 @@ public class app_user extends javax.swing.JFrame {
             }
         });
 
-        back_btn.setBackground(new java.awt.Color(0, 102, 204));
-        back_btn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        back_btn.setForeground(new java.awt.Color(255, 255, 255));
-        back_btn.setText("back");
-        back_btn.addActionListener(new java.awt.event.ActionListener() {
+        back_to_login_btn.setBackground(new java.awt.Color(0, 102, 204));
+        back_to_login_btn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        back_to_login_btn.setForeground(new java.awt.Color(255, 255, 255));
+        back_to_login_btn.setText("back");
+        back_to_login_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                back_btnActionPerformed(evt);
+                back_to_login_btnActionPerformed(evt);
             }
         });
 
@@ -115,7 +115,7 @@ public class app_user extends javax.swing.JFrame {
                     .addComponent(view_all_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(search_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(add_feedback_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(back_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(back_to_login_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         side_PanelLayout.setVerticalGroup(
@@ -128,7 +128,7 @@ public class app_user extends javax.swing.JFrame {
                 .addGap(86, 86, 86)
                 .addComponent(add_feedback_btn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(back_btn)
+                .addComponent(back_to_login_btn)
                 .addGap(64, 64, 64))
         );
 
@@ -330,11 +330,11 @@ public class app_user extends javax.swing.JFrame {
         add_feedback_panel.setVisible(true);
     }//GEN-LAST:event_add_feedback_btnActionPerformed
 
-    private void back_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_btnActionPerformed
+    private void back_to_login_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_to_login_btnActionPerformed
         login_view a = new login_view();
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_back_btnActionPerformed
+    }//GEN-LAST:event_back_to_login_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -374,7 +374,7 @@ public class app_user extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton add_feedback_btn;
     private javax.swing.JPanel add_feedback_panel;
-    private javax.swing.JButton back_btn;
+    private javax.swing.JButton back_to_login_btn;
     private javax.swing.JTextField email_field;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;

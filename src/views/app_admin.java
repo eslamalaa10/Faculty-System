@@ -42,7 +42,7 @@ public class app_admin extends javax.swing.JFrame {
         view_all_btn = new javax.swing.JButton();
         add_faculty_Button = new javax.swing.JButton();
         search_btn = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        logout_btn = new javax.swing.JButton();
         feedback_btn = new javax.swing.JButton();
         main_panel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -117,13 +117,13 @@ public class app_admin extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 102, 204));
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("logout");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        logout_btn.setBackground(new java.awt.Color(0, 102, 204));
+        logout_btn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        logout_btn.setForeground(new java.awt.Color(255, 255, 255));
+        logout_btn.setText("logout");
+        logout_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                logout_btnActionPerformed(evt);
             }
         });
 
@@ -147,7 +147,7 @@ public class app_admin extends javax.swing.JFrame {
                     .addComponent(view_all_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(add_faculty_Button, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                     .addComponent(search_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(logout_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(feedback_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -163,7 +163,7 @@ public class app_admin extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(feedback_btn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(logout_btn)
                 .addGap(69, 69, 69))
         );
 
@@ -587,11 +587,11 @@ public class app_admin extends javax.swing.JFrame {
         feedback_area.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void logout_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logout_btnActionPerformed
         login_view a = new login_view();
         a.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_logout_btnActionPerformed
 
     private void feedback_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feedback_btnActionPerformed
         Feedback_controller fc=new Feedback_controller();
@@ -666,7 +666,6 @@ public class app_admin extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -681,6 +680,7 @@ public class app_admin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton logout_btn;
     private javax.swing.JPanel main_panel;
     private javax.swing.JTextField professionalInterest_field;
     private javax.swing.JPanel search_Panel;

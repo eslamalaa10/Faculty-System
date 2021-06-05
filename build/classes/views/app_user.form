@@ -57,7 +57,7 @@
                       <Component id="view_all_btn" max="32767" attributes="0"/>
                       <Component id="search_btn" max="32767" attributes="0"/>
                       <Component id="add_feedback_btn" alignment="0" max="32767" attributes="0"/>
-                      <Component id="back_btn" alignment="0" max="32767" attributes="0"/>
+                      <Component id="back_to_login_btn" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -73,7 +73,7 @@
                   <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
                   <Component id="add_feedback_btn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="back_btn" min="-2" max="-2" attributes="0"/>
+                  <Component id="back_to_login_btn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -131,7 +131,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="add_feedback_btnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="back_btn">
+        <Component class="javax.swing.JButton" name="back_to_login_btn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="66" red="0" type="rgb"/>
@@ -145,7 +145,7 @@
             <Property name="text" type="java.lang.String" value="back"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_btnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="back_to_login_btnActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
