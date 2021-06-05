@@ -26,7 +26,7 @@ public class app_admin extends javax.swing.JFrame {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         //this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
         this.setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
-
+        
     }
 
     /**
@@ -497,7 +497,7 @@ public class app_admin extends javax.swing.JFrame {
 //        content_panel.add(jLabel1);
         String data = new String();
         for (Faculty faculty : f) {
-            data += "name: " + faculty.get_name()+ "\ndepartment: " + faculty.get_department()+ "\ncourses: " + faculty.get_courses()+ "\narea of expertise: " + faculty.get_areaofexpertise()+ "\nprofessional Interest: " + faculty.get_professionalInterest() + "\n\n";
+            data += "name: " + faculty.get_name() + "\ndepartment: " + faculty.get_department() + "\ncourses: " + faculty.get_courses() + "\narea of expertise: " + faculty.get_areaofexpertise() + "\nprofessional Interest: " + faculty.get_professionalInterest() + "\n\n";
         }
         jTextArea1.setText(data);
         jScrollPane1.setVisible(true);
@@ -538,19 +538,21 @@ public class app_admin extends javax.swing.JFrame {
         search_result_textarea.setText("");
 //        Faculty_controller fc = new Faculty_controller();
 //        Faculty faculty;
- 
-        AbstractFaculty faculty = faculty_factory.get_faculty(search_field.getText());
+        search_result_textarea.setText("");
+        AbstractFaculty faculty=null;
+         faculty= new faculty_factory().get_faculty(search_field.getText());
         if (faculty.isNil()) {
             JOptionPane.showMessageDialog(null, "not found");
         } else {
-            search_result_textarea.setText("name: " + faculty.get_name()+ "\ndepartment: " + faculty.get_department()+ "\ncourses: " + faculty.get_courses()+ "\narea of expertise: " + faculty.get_areaofexpertise()+ "\nprofessional Interest: " + faculty.get_professionalInterest());
+            search_result_textarea.setText("name: " + faculty.get_name() + "\ndepartment: " + faculty.get_department() + "\ncourses: " + faculty.get_courses() + "\narea of expertise: " + faculty.get_areaofexpertise() + "\nprofessional Interest: " + faculty.get_professionalInterest());
         }
     }//GEN-LAST:event_jButton2ActionPerformed
-    Faculty fac = null;
     private void edit_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edit_btnActionPerformed
-        Faculty_controller fc = new Faculty_controller();
-        fac = fc.get_faculty(search_field.getText());
-        if (fac == null) {
+//        Faculty_controller fc = new Faculty_controller();
+//        fac = fc.get_faculty(search_field.getText());
+
+        AbstractFaculty fac = new faculty_factory().get_faculty(search_field.getText());
+        if (fac.isNil()) {
             JOptionPane.showMessageDialog(null, "not found");
         } else {
             edit_areaofexpertise_field.setText(fac.get_areaofexpertise());
@@ -564,7 +566,7 @@ public class app_admin extends javax.swing.JFrame {
             edit_panel.setVisible(true);
             feedback_area.setVisible(false);
             search_result_textarea.setText("");
-
+            
         }
     }//GEN-LAST:event_edit_btnActionPerformed
 
@@ -585,6 +587,11 @@ public class app_admin extends javax.swing.JFrame {
         add_panel.setVisible(false);
         edit_panel.setVisible(false);
         feedback_area.setVisible(false);
+        edit_areaofexpertise_field.setText("");
+        edit_courses_field.setText("");
+        edit_department_field.setText("");
+        edit_faculty_name_field.setText("");
+        edit_professionalInterest_field.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void logout_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logout_btnActionPerformed
@@ -594,12 +601,12 @@ public class app_admin extends javax.swing.JFrame {
     }//GEN-LAST:event_logout_btnActionPerformed
 
     private void feedback_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_feedback_btnActionPerformed
-        Feedback_controller fc=new Feedback_controller();
+        Feedback_controller fc = new Feedback_controller();
         ArrayList<Feedback> feed = new ArrayList<>();
-        feed=fc.view_feedback();
-        String result="";
+        feed = fc.view_feedback();
+        String result = "";
         for (Feedback feedback : feed) {
-            result+="name: "+feedback.getName()+"\n\nSubject: "+feedback.getSubject()+"\n\nMessage: "+feedback.getMessage()+"\n\n\n";
+            result += "name: " + feedback.getName() + "\n\nSubject: " + feedback.getSubject() + "\n\nMessage: " + feedback.getMessage() + "\n\n\n";
         }
         System.out.println(result);
         feedback_area.setText(result);

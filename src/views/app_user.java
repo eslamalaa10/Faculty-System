@@ -310,7 +310,7 @@ public class app_user extends javax.swing.JFrame {
         search_result_textarea.setText("");
 //        Faculty_controller fc = new Faculty_controller();
 //        Faculty faculty;
-        AbstractFaculty faculty = faculty_factory.get_faculty(search_field.getText());
+        AbstractFaculty faculty = new faculty_factory().get_faculty(search_field.getText());
         if (faculty.isNil()) {
             JOptionPane.showMessageDialog(null, "not found");
         } else {

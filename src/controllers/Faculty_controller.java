@@ -78,7 +78,7 @@ public class Faculty_controller {
     }
 
     public String edit_faculty(String name, String department, String courses, String areaofexpertise, String professionalInterest) {
-        Faculty result;
+//        Faculty result;
         try {
 //            if (get_faculty(name) == null) {
 //                result = get_faculty(name);
@@ -103,7 +103,7 @@ public class Faculty_controller {
                 prep.setString(4, areaofexpertise);
                 prep.setString(5, professionalInterest);
                 prep.setString(6, name);
-
+                System.out.println("name:"+ name );
                 prep.execute();
 //            } else {
 //                return "not found";
